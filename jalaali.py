@@ -1,3 +1,6 @@
+from __future__ import division
+
+
 def div(a, b):
     """Helper function for division
 
