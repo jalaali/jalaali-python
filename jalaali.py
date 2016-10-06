@@ -8,7 +8,7 @@ def div(a, b):
     :return: integer division result
     :rtype: int
     """
-    return a // b
+    return int(a / b)
 
 
 def mod(a, b):
@@ -21,9 +21,7 @@ def mod(a, b):
     :return: modulo result
     :rtype: int
     """
-    x = a % b
-    x = x - b if a < 0 else x
-    return x
+    return a - div(a, b) * b
 
 
 class Jalaali:
@@ -71,9 +69,11 @@ class Jalaali:
         :return: is date valid?
         :rtype: bool
         """
+
         year_is_valid = (-61 <= jy <= 3177)
         month_is_valid = (1 <= jm <= 12)
         day_is_valid = (1 <= jd <= Jalaali.jalaali_month_length(jy, jm))
+
         return year_is_valid and month_is_valid and day_is_valid
 
     @staticmethod
@@ -130,7 +130,7 @@ class Jalaali:
         jp = breaks[0]
         jump = None
         if jy < jp or jy >= breaks[b1 - 1]:
-            raise Exception('Invalid Jalaali Year ' + str(jy))
+            raise Exception('Invalid Jalaali year ' + str(jy))
         # Find the limiting years for the Jalaali year jy.
 
         for i in range(1, b1):
@@ -176,7 +176,7 @@ class Jalaali:
         :rtype: int
         """
         r = Jalaali.jal_cal(jy)
-        return Jalaali.g2d(r['gy'], 3, r['march'] + (jm - 1) * 31 - div(jm, 7) * (jm - 7) + jd - 1)
+        return Jalaali.g2d(r['gy'], 3, r['march']) + (jm - 1) * 31 - div(jm, 7) * (jm - 7) + jd - 1
 
     @staticmethod
     def d2j(jdn):
@@ -196,12 +196,12 @@ class Jalaali:
         if k >= 0:
             if k <= 185:
                 # the first 6 months
-                jm = 1 + div(k, 31)
+                jm = div(k, 31) + 1
                 jd = mod(k, 31) + 1
                 return {'jy': jy, 'jm': jm, 'jd': jd}
             else:
                 # the remaining months.
-                k = -186
+                k -= 186
         else:
             # previous jalaali year
             jy -= 1
@@ -243,8 +243,7 @@ class Jalaali:
         :return: dictionary containing gy, gm, gd
         :rtype: dict
         """
-        j = 4 * jdn + 139361631
-        j = j + div(div(4 * jdn + 183187720, 146097) * 3, 4) * 4 - 3908
+        j = 4 * jdn + 139361631 + div(div(4 * jdn + 183187720, 146097) * 3, 4) * 4 - 3908
         i = div(mod(j, 1461), 4) * 5 + 308
         gd = div(mod(i, 153), 5) + 1
         gm = mod(div(i, 153), 12) + 1
