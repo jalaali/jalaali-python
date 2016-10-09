@@ -8,8 +8,18 @@ Jalaali calendar is a solar calendar that was used in Persia, variants of which 
 Calendar conversion is based on the [algorithm provided by Kazimierz M. Borkowski](http://www.astro.uni.torun.pl/~kb/Papers/EMP/PersianC-EMP.htm) and has a very good performance.
 
 ##Install
+    
+    pip install jalaali
+
+or download and run
+
+    python setup.py install
 
 ##Usage
+
+    from jalaali import Jalaali
+    # Call static methods on Jalaali class
+
 
 ###to_jalaali(gy,gm,gd)
 
