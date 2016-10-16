@@ -1,4 +1,4 @@
-![Travis-ci](https://travis-ci.org/aaghamohammadi/jalaali-python.svg?branch=master)
+![Travis-ci](https://travis-ci.org/jalaali/jalaali-python.svg?branch=master)
 ##Jalaali Python
 
 Python implementation of [jalaali.js](https://github.com/jalaali/jalaali-js) which contains functions for converting Jalaali and Gregorian calnedar systems to each other.
