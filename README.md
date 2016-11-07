@@ -3,6 +3,9 @@
 
 Python implementation of [jalaali.js](https://github.com/jalaali/jalaali-js) which contains functions for converting Jalaali and Gregorian calnedar systems to each other.
 
+##Contribution
+We need your help in making sure jalaali python package behave correctly. You can add more tests to increase coverage rate.
+
 ##About
 
 Jalaali calendar is a solar calendar that was used in Persia, variants of which today are still in use in Iran as well as Afghanistan. [Read more on Wikipedia](http://en.wikipedia.org/wiki/Jalali_calendar) or see [Calendar Converter](http://www.fourmilab.ch/documents/calendar/).
