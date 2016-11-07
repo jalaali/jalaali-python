@@ -2,7 +2,6 @@ language: python
 install:
     - pip install jalaali
     - pip install coveralls
-
 python:
     - "2.6"
     - "2.7"
@@ -10,7 +9,10 @@ python:
     - "3.3"
     - "3.4"
 script:
-      python tests/tests.py
-      coverage run tests/tests.py
+  python tests/tests.py
+  coverage run tests/tests.py
+after_success:
+  coveralls
 notifications:
   email: false
+
