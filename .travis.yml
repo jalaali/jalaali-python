@@ -9,8 +9,8 @@ python:
     - "3.3"
     - "3.4"
 script:
-  python tests/tests.py
-  coverage run tests/tests.py
+    - python tests/tests.py
+    - coverage run tests/tests.py
 after_success:
   coveralls
 notifications:
