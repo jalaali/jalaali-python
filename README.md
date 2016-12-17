@@ -1,7 +1,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/84125eab2ecd4324a540412d649cf207)](https://www.codacy.com/app/al-aghamohammadi/jalaali-python?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jalaali/jalaali-python&amp;utm_campaign=Badge_Grade)![Travis-ci](https://travis-ci.org/jalaali/jalaali-python.svg?branch=master)[![Coverage Status](https://coveralls.io/repos/github/jalaali/jalaali-python/badge.svg?branch=master)](https://coveralls.io/github/jalaali/jalaali-python?branch=master)
 ##Jalaali Python
 
-Python implementation of [jalaali.js](https://github.com/jalaali/jalaali-js) which contains functions for converting Jalaali and Gregorian calnedar systems to each other.
+Python implementation of [jalaali.js](https://github.com/jalaali/jalaali-js) which contains functions for converting Jalaali and Gregorian calendar systems to each other.
 
 ##Contribution
 We need your help in making sure jalaali python package behave correctly. You can add more tests to increase coverage rate.
