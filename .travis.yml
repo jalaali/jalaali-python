@@ -1,14 +1,13 @@
 language: python
 install:
     - pip install jalaali
-    - pip install codecove
 python:
     - "2.6"
     - "2.7"
     - "3.4"
     - "3.5"
 after_success:
-    - codecove
+    - bash <(curl -s https://codecov.io/bash)
 notifications:
   email: false
 
