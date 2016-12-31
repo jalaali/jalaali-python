@@ -6,6 +6,8 @@ python:
     - "2.7"
     - "3.4"
     - "3.5"
+after_success:
+    - bash <(curl -s https://codecov.io/bash)
 notifications:
   email: false
 
