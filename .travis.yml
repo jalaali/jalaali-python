@@ -1,6 +1,7 @@
 language: python
 install:
     - pip install jalaali
+    - pip install coverage
 python:
     - "2.6"
     - "2.7"
