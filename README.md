@@ -1,17 +1,18 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/84125eab2ecd4324a540412d649cf207)](https://www.codacy.com/app/al-aghamohammadi/jalaali-python?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=jalaali/jalaali-python&amp;utm_campaign=Badge_Grade)![Travis-ci](https://travis-ci.org/jalaali/jalaali-python.svg?branch=master)
-##Jalaali Python
+
+## Jalaali Python
 
 Python implementation of [jalaali.js](https://github.com/jalaali/jalaali-js) which contains functions for converting Jalaali and Gregorian calendar systems to each other.
 
-##Contribution
+## Contribution
 We need your help in making sure jalaali python package behave correctly. You can add more tests to increase coverage rate.
 
-##About
+## About
 
 Jalaali calendar is a solar calendar that was used in Persia, variants of which today are still in use in Iran as well as Afghanistan. [Read more on Wikipedia](http://en.wikipedia.org/wiki/Jalali_calendar) or see [Calendar Converter](http://www.fourmilab.ch/documents/calendar/).
 Calendar conversion is based on the [algorithm provided by Kazimierz M. Borkowski](http://www.astro.uni.torun.pl/~kb/Papers/EMP/PersianC-EMP.htm) and has a very good performance.
 
-##Install
+## Install
     
     pip install jalaali
 
@@ -19,13 +20,13 @@ or download and run
 
     python setup.py install
 
-##Usage
+## Usage
 
     from jalaali import Jalaali
     # Call static methods on Jalaali class
 
 
-###to_jalaali(gy,gm,gd)
+### to_jalaali(gy,gm,gd)
 
 Converts a Gregorian date to Jalaali.
 
@@ -33,7 +34,7 @@ Converts a Gregorian date to Jalaali.
 Jalaali.to_jalaali(2016, 10, 6) # {jy:1395, jm:7, jd:15}
 ```
 
-###to_gregorian(jy,jm,jd)
+### to_gregorian(jy,jm,jd)
 
 Converts a Jalaali date to Gregorian.
 
@@ -41,7 +42,7 @@ Converts a Jalaali date to Gregorian.
     Jalaali.to_gregorian(1395, 7, 15) # {gy:2016, gm:10, gd:6}
 ```
 
-###is_valid_jalaali_date(jy,jm,jd)
+### is_valid_jalaali_date(jy,jm,jd)
 
 Checks whether a Jalaali date is valid or not.
 
@@ -50,7 +51,7 @@ Checks whether a Jalaali date is valid or not.
     Jalaali.is_valid_jalaali_date(1395,12,30) # True
 ```
 
-###is_leap_jalaali_year(jy)
+### is_leap_jalaali_year(jy)
 
 Is this a leap year or not?
 
@@ -59,7 +60,7 @@ Is this a leap year or not?
     Jalaali.is_leap_jalaali_year(1395) # True
 ```
 
-###jalaali_month_length(jy,jm)
+### jalaali_month_length(jy,jm)
 
 Number of days in a given month in a Jalaali year.
 
@@ -68,7 +69,7 @@ Number of days in a given month in a Jalaali year.
     Jalaali.jalaali_month_length(1395, 12) # 30
 ```
 
-##Licence
+## Licence
 
 MIT
 
